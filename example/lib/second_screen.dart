@@ -63,6 +63,39 @@ class SecondView extends StatelessWidget {
                   print(v);
                 },
               ),
+              const SizedBox(height: 20),
+              CustomSlidingSegmentedControl<SegmentType>(
+                initialValue: SegmentType.paper,
+                isStretch: true,
+                isShowDivider: true,
+                dividerSettings: DividerSettings(
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  thickness: 1,
+                  indent: 1,
+                  endIndent: 1,
+                  verticalMargin: 8,
+                ),
+                children: const {
+                  SegmentType.news: Text(
+                    'Flights',
+                    textAlign: TextAlign.center,
+                  ),
+                  SegmentType.map: Text(
+                    'Map',
+                    textAlign: TextAlign.center,
+                  ),
+                  SegmentType.paper: Text(
+                    'News',
+                    textAlign: TextAlign.center,
+                  ),
+                },
+                onValueChanged: (v) {
+                  print(v);
+                },
+              ),
             ],
           ),
         ),

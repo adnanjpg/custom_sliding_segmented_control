@@ -282,6 +282,9 @@ class _CustomSlidingSegmentedControlState<T> extends State<CustomSlidingSegmente
                   offset: Offset(widget.dividerSettings.thickness / 2, 0),
                   child: Container(
                     width: widget.dividerSettings.thickness,
+                    margin: EdgeInsets.symmetric(
+                      vertical: widget.dividerSettings.verticalMargin,
+                    ),
                     decoration: widget.dividerSettings.decoration,
                   ),
                 ),
